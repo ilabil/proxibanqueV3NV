@@ -1,0 +1,47 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+
+    <title>ProxiBanque</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="/SimpleFullMavenWarInject/javax.faces.resource/css/bootstrap.min.css.xhtml" rel="stylesheet">
+
+
+    <!-- Custom styles for this template -->
+    <link href="/SimpleFullMavenWarInject/javax.faces.resource/css/signin.css.xhtml" rel="stylesheet">
+
+
+  </head>
+
+  <body>
+
+    <div class="container">
+
+      <form class="form-signin" name="loginForm" method="POST" action="j_security_check">
+        <h2 class="form-signin-heading">Veuillez vous identifier</h2>
+        <label for="inputLogin" class="sr-only">Utilisateur : </label>
+        <input type="text" id="inputLogin" name="j_username" class="form-control" placeholder="utilisateur" required autofocus>
+        <label for="inputPassword" class="sr-only">Mot de passe : </label>
+        <input type="password" name="j_password" id="inputPassword" class="form-control" placeholder="mot de passe" required>
+        <div class="checkbox">
+<!--           <label> -->
+<!--             <input type="checkbox" value="remember-me"> Remember me -->
+<!--           </label> -->
+        </div>
+        <button class="btn btn-lg btn-primary btn-block" type="submit">Se connecter</button>
+      </form>
+
+    </div> <!-- /container -->
+
+
+   
+  </body>
+</html>

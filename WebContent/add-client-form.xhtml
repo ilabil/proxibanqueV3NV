@@ -1,0 +1,80 @@
+
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:f="http://xmlns.jcp.org/jsf/core"
+	xmlns:p="http://primefaces.org/ui">
+<ui:decorate template="template/template.xhtml">
+	<ui:define name="contenu">
+		<h:head>
+			<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+			<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+			<h:outputStylesheet name="css/bootstrap.min.css" />
+
+			<title>Add Client</title>
+
+		</h:head>
+
+		<h:body>
+			<h:outputStylesheet name="css/monstyle.css" />
+			<div id="wrapper">
+				<div id="header"></div>
+			</div>
+
+			<div class="container">
+				<h2>Ajout Client</h2>
+
+				<h:messages globalOnly="true" />
+
+				<h:form id="form" style="margin-top: 10px;">
+					<h:panelGrid columns="3">
+
+						
+							<h:outputLabel style="margin-top: 10px">Prénom*:</h:outputLabel>
+							<h:inputText class="form-control" value="#{client.firstName}"
+								id="firstName" style="margin-top: 10px"  required="true"  requiredMessage="Prénom requis" validatorMessage="caractères alphanumériques requis">
+							<f:validateRegex pattern="^[a-zA-Z-]+$"/>
+							<f:validateLength minimum="3"/>
+									</h:inputText>
+							<h:message for="firstName" />
+	
+
+							<h:outputLabel>Nom*:</h:outputLabel>
+							<h:inputText class="form-control" value="#{client.lastName}"
+								id="lastName" style="margin-top: 10px" required="true"  requiredMessage="Nom requis" validatorMessage="caractères alphanumériques requis">
+								 <f:validateLength minimum="3"/>
+								 <f:validateRegex pattern="^[a-zA-Z-]+$"/>
+								</h:inputText>
+							<h:message for="lastName" />
+							
+							<h:outputLabel>Email*:</h:outputLabel>
+							<h:inputText class="form-control" value="#{client.email}"
+								id="email" style="margin-top: 10px" required="true"  requiredMessage="Email requis" validatorMessage="format de l'e-mail incorrect exemple 'john@gmail.com'">
+								 <f:validateRegex pattern="[\w\.-]*[a-zA-Z0-9_]@[\w\.-]*[a-zA-Z0-9]\.[a-zA-Z][a-zA-Z\.]*[a-zA-Z]"/>
+								</h:inputText>
+							<h:message for="email" />
+				
+							<h:outputLabel>Ville:</h:outputLabel>
+							<h:inputText class="form-control" value="#{client.ville}"
+								id="ville" style="margin-top: 10px"/>
+							<h:message for="ville" />
+						
+						<h:outputLabel />
+						<h:commandButton value="Sauvegarder" styleClass="save" style="margin-top: 10px"
+							action="#{clientController.addClient(client)}" />
+
+					</h:panelGrid>
+				</h:form>
+
+				<div style="clear: both;"></div>
+
+				<p>
+					<h:outputLink value="list-clients.xhtml">Retour à la liste clients</h:outputLink>
+				</p>
+
+			</div>
+		</h:body>
+	</ui:define>
+</ui:decorate>
+</html>

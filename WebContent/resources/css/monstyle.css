@@ -1,0 +1,129 @@
+body {
+/* 	background-color: #309CAB; */
+	color: black;
+    margin: 0;
+    background-color: lightgrey;
+}
+
+
+
+ul {
+  list-style-type: none; 
+       margin: 0; 
+       padding: 0; 
+    width: 100%;
+    background-color: #f1f1f1;
+    position: relative;
+    overflow: auto;
+    font-size: large;
+    margin-right: -14px;
+    margin-top: -22px; 
+    
+/* list-style-type: none; */
+/*     width: 25%; */
+/*     background-color: rgb(241, 241, 241); */
+/*     position: fixed; */
+/*     height: 100%; */
+/*     font-size: large; */
+/*     margin: -21px 0px 0px; */
+/*     padding: 0px; */
+/*     overflow: auto; */
+
+}
+
+.header {
+/* 	 overflow: hidden; */
+/*   background-color: #333; */
+	background-color: #333;
+    color: grey;
+/*     bottom: 0; */
+    height: 50px;
+    width: 100%;
+    padding-top: 20px;
+ 
+}
+
+.header h2{
+	margin-top: -10px;
+}
+.bg-4 { 
+    background-color: #333;
+    color: grey;
+    position: fixed;
+    bottom: 0;
+    height: 50px;
+    width: 100%;
+    text-align: center;
+    padding-top: 20px;
+}
+
+
+
+li a {
+    display: block;
+    color: #000;
+    padding: 8px 16px;
+    text-decoration: none;
+}
+
+ .contenu 
+
+ { 
+/* 	float: right; */
+/* 	background-color: lightgrey;  */
+/* 	width: 75%; */
+/* 	margin-right: 0; */
+/* 	margin-top: -21px; */
+/* 	height: -webkit-fill-available; */
+	
+ } 
+
+
+
+
+li a.active {
+    background-color: #008040;
+    color: white;
+}
+
+li a:hover:not(.active) {
+    background-color: #555;
+    color: white;
+}
+
+
+.nav-sidebar{
+	/* a enlever pour que responsive */
+	
+	padding-bottom:400px;
+}
+
+/* #sidebar */
+/* { */
+/* 	width: 250px; */
+/* 	padding-top:22px; */
+/* 	height: 400px; */
+/* 	background-color :white; */
+/* } */
+
+/* #sidebar{ */
+/* 	height: -webkit-fill-available; */
+/* 	background-color: whitesmoke; */
+/* } */
+
+/* @media (min-width: 768px) { */
+/*   #sidebar { */
+/*     position: fixed; */
+/*     top: 51px; */
+/*     bottom: 0; */
+/*     left: 0; */
+/*     z-index: 1000; */
+/*     display: block; */
+/*     padding: 20px; */
+/*     overflow-x: hidden; */
+/*     overflow-y: auto; Scrollable contents if viewport is shorter than content. */
+/*     background-color: #f5f5f5; */
+/*     border-right: 1px solid #eee; */
+/*   } */
+}
+
